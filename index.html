@@ -3,40 +3,54 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Ankit Chaubey – GitHub Profile</title>
-  <meta name="description" content="Official developer links of Ankit Chaubey. Redirecting to GitHub profile.">
+  <title>Redirecting…</title>
+  <meta name="description" content="Redirecting to the official site.">
 
-  <!-- 🔑 PRIMARY SEO SIGNAL -->
-  <link rel="canonical" href="https://github.ankitchaubey.in">
-
-  <!-- 🚫 Do not index this redirect page -->
+  <!-- 🚫 Do not index redirect domain -->
   <meta name="robots" content="noindex, follow">
 
-  <!-- 🚀 Instant redirect -->
-  <meta http-equiv="refresh" content="0; url=https://github.ankitchaubey.in">
+  <!-- 🧠 Dynamic canonical (JS sets it correctly) -->
+  <link rel="canonical" href="https://github.ankitchaubey.in">
 
   <!-- 🌍 Open Graph -->
   <meta property="og:title" content="Ankit Chaubey – GitHub">
-  <meta property="og:description" content="Developer profile and open-source work of Ankit Chaubey.">
-  <meta property="og:url" content="https://github.ankitchaubey.in">
   <meta property="og:type" content="website">
 
-  <!-- 🧠 JS redirect (strong reinforcement) -->
   <script>
-    window.location.replace("https://github.ankitchaubey.in");
+    (function () {
+      const targetBase = "https://github.ankitchaubey.in";
+
+      const path = window.location.pathname;
+      const query = window.location.search;
+      const hash = window.location.hash;
+
+      const targetUrl = targetBase + path + query + hash;
+
+      window.location.replace(targetUrl);
+    })();
   </script>
 </head>
 
 <body>
-  <p>This page has moved permanently to
-    <a href="https://github.ankitchaubey.in">github.ankitchaubey.in</a>.
+  <p>
+    Redirecting to
+    <a id="target" href="https://github.ankitchaubey.in">official site</a>…
   </p>
 
-  <!-- 🔍 SEO DISCOVERY LINKS (VERY IMPORTANT) -->
+  <!-- 🔍 SEO DISCOVERY LINKS -->
   <nav style="display:none;">
-    <a href="https://ankitchaubey.in">Ankit Chaubey Official Website</a>
-    <a href="https://about.ankitchaubey.in">About Ankit Chaubey</a>
-    <a href="https://github.ankitchaubey.in">Ankit Chaubey GitHub</a>
+    <a href="https://ankitchaubey.in">Official Website</a>
+    <a href="https://about.ankitchaubey.in">About</a>
+    <a href="https://github.ankitchaubey.in">GitHub</a>
   </nav>
+
+  <script>
+    // Update fallback link for users
+    document.getElementById("target").href =
+      "https://github.ankitchaubey.in" +
+      window.location.pathname +
+      window.location.search +
+      window.location.hash;
+  </script>
 </body>
 </html>
